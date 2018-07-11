@@ -13,6 +13,7 @@
 		1376064620ED53DD00C63322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1376064520ED53DD00C63322 /* Assets.xcassets */; };
 		1376064920ED53DD00C63322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1376064720ED53DD00C63322 /* LaunchScreen.storyboard */; };
 		1376065120EFFD5300C63322 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1376065020EFFD5300C63322 /* GoogleService-Info.plist */; };
+		13E3E9D220F6974300D857B6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E3E9D120F6974300D857B6 /* WelcomeViewController.swift */; };
 		FE723ED388E572211111CD95 /* Pods_SerenaDominguezE4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADBDFCBB6D08B5FE2AB2DC9 /* Pods_SerenaDominguezE4.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		1376064820ED53DD00C63322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1376064A20ED53DD00C63322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1376065020EFFD5300C63322 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13E3E9D120F6974300D857B6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		7E3AC9C270B3E74262F0DF01 /* Pods-SerenaDominguezE4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerenaDominguezE4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SerenaDominguezE4/Pods-SerenaDominguezE4.debug.xcconfig"; sourceTree = "<group>"; };
 		BADBDFCBB6D08B5FE2AB2DC9 /* Pods_SerenaDominguezE4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerenaDominguezE4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA42FF0D3B11B751A3E32FD5 /* Pods-SerenaDominguezE4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerenaDominguezE4.release.xcconfig"; path = "Pods/Target Support Files/Pods-SerenaDominguezE4/Pods-SerenaDominguezE4.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				1376063E20ED53DD00C63322 /* AppDelegate.swift */,
 				1376064020ED53DD00C63322 /* ViewController.swift */,
+				13E3E9D120F6974300D857B6 /* WelcomeViewController.swift */,
 				1376064220ED53DD00C63322 /* Main.storyboard */,
 				1376064520ED53DD00C63322 /* Assets.xcassets */,
 				1376064720ED53DD00C63322 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E3E9D220F6974300D857B6 /* WelcomeViewController.swift in Sources */,
 				1376064120ED53DD00C63322 /* ViewController.swift in Sources */,
 				1376063F20ED53DD00C63322 /* AppDelegate.swift in Sources */,
 			);

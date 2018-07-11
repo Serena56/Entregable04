@@ -24,7 +24,7 @@
                             </imageView>
                             <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEX-aT-RzM">
                                 <rect key="frame" x="15" y="518.5" width="345" height="133.5"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="LOGIN">
@@ -35,6 +35,10 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="loginTappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="67G-g0-U4I"/>
+                                    <segue destination="I3J-1X-5g0" kind="show" identifier="primerSegue" id="fzS-NT-rLM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,10 +54,80 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="oEX-aT-RzM" id="Wpw-1o-OdO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="106.59670164917542"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="UcP-Yg-3KQ">
+            <objects>
+                <viewController id="I3J-1X-5g0" customClass="WelcomeViewController" customModule="SerenaDominguezE4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBt-9U-iJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGROUND1" translatesAutoresizingMaskIntoConstraints="NO" id="HrQ-lk-aHK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGa-jo-dHW">
+                                <rect key="frame" x="15" y="452" width="345" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Welcome!">
+                                        <attributes>
+                                            <font key="NSFont" size="60" name="HiraMinProN-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTP-Fu-tHk">
+                                <rect key="frame" x="252.5" y="10" width="112.5" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="LOGOUT">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="23" name="HiraMinProN-W3"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="I3J-1X-5g0" eventType="touchUpInside" id="0bo-Wi-eaM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AGa-jo-dHW" firstAttribute="height" secondItem="HrQ-lk-aHK" secondAttribute="height" multiplier="0.3" id="2MC-dl-t6M"/>
+                            <constraint firstItem="bXK-kF-5Y8" firstAttribute="bottom" secondItem="AGa-jo-dHW" secondAttribute="bottom" constant="15" id="BRD-04-tl5"/>
+                            <constraint firstAttribute="trailing" secondItem="HrQ-lk-aHK" secondAttribute="trailing" id="GiH-gs-VFL"/>
+                            <constraint firstItem="hTP-Fu-tHk" firstAttribute="width" secondItem="HrQ-lk-aHK" secondAttribute="width" multiplier="0.3" id="Q7G-Ue-daI"/>
+                            <constraint firstItem="hTP-Fu-tHk" firstAttribute="top" secondItem="UBt-9U-iJ2" secondAttribute="top" constant="10" id="Xs1-vW-xGM"/>
+                            <constraint firstAttribute="trailing" secondItem="hTP-Fu-tHk" secondAttribute="trailing" constant="10" id="bdA-OV-JlV"/>
+                            <constraint firstItem="HrQ-lk-aHK" firstAttribute="leading" secondItem="UBt-9U-iJ2" secondAttribute="leading" id="g7H-gI-fw2"/>
+                            <constraint firstAttribute="bottom" secondItem="HrQ-lk-aHK" secondAttribute="bottom" id="kKG-zL-819"/>
+                            <constraint firstItem="bXK-kF-5Y8" firstAttribute="trailing" secondItem="AGa-jo-dHW" secondAttribute="trailing" constant="15" id="m88-3a-XLK"/>
+                            <constraint firstItem="HrQ-lk-aHK" firstAttribute="top" secondItem="UBt-9U-iJ2" secondAttribute="top" id="tlE-Fu-xqM"/>
+                            <constraint firstItem="AGa-jo-dHW" firstAttribute="leading" secondItem="bXK-kF-5Y8" secondAttribute="leading" constant="15" id="yDb-zK-rEi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bXK-kF-5Y8"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoutButton" destination="hTP-Fu-tHk" id="2Gs-gs-Mpc"/>
+                        <outlet property="welcomeLabel" destination="AGa-jo-dHW" id="Kr4-5x-xA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iid-V7-NUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="107"/>
         </scene>
     </scenes>
     <resources>
