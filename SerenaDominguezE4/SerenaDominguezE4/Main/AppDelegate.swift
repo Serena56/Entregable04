@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseUI
 import Firebase
 
 
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+        let scoresRef = Database.database().reference()
+        scoresRef.keepSynced(true)
         return true
     }
 
