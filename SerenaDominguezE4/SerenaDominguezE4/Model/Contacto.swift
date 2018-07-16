@@ -15,6 +15,7 @@ class Contacto {
     var telefono: String
     var email: String
     var empresa: String
+
     
     
     init(nombreYapellido: String, telefono: String, email: String, empresa: String) {
@@ -22,6 +23,7 @@ class Contacto {
         self.telefono = telefono
         self.email = email
         self.empresa = empresa
+
     }
     
     init(dictionary: [String : AnyObject]) {

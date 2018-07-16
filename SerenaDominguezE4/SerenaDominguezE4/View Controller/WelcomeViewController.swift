@@ -9,21 +9,22 @@
 import UIKit
 import FirebaseUI
 
-class WelcomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableViewDataSource {
+class WelcomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate {
     
     var authUI: FUIAuth?
     @IBOutlet weak var tableView: UITableView!
     var contactos: [Contacto] = []
+    var storageRef: StorageReference!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         
+        storageRef = Storage.storage().reference()
+        
         tableView.dataSource = self
         tableView.delegate = self
-        
-        getContactos()
         
         if let currentUser = Auth.auth().currentUser {
             if Auth.auth().currentUser != nil {
@@ -65,6 +66,9 @@ class WelcomeViewController: UIViewController, FUIAuthDelegate, UITableViewDeleg
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        contactos = []
+        getContactos()
+        
     }
     
     func getContactos() -> Void {
@@ -75,7 +79,7 @@ class WelcomeViewController: UIViewController, FUIAuthDelegate, UITableViewDeleg
         
         let contactosRef = ref.child("usuarios").child(currentUser)
         
-            contactosRef.observe(.value, with: { snapshot in
+            contactosRef.observeSingleEvent(of:.value, with: { snapshot in
             
             if let dictionaryArray = snapshot.value as?  [String: AnyObject]{
                 for dict in dictionaryArray.values{
