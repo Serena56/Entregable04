@@ -13,6 +13,9 @@
 		1376064620ED53DD00C63322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1376064520ED53DD00C63322 /* Assets.xcassets */; };
 		1376064920ED53DD00C63322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1376064720ED53DD00C63322 /* LaunchScreen.storyboard */; };
 		1376065120EFFD5300C63322 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1376065020EFFD5300C63322 /* GoogleService-Info.plist */; };
+		1397E53D20FCEC0D00CD1377 /* ContactoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397E53C20FCEC0D00CD1377 /* ContactoTableViewCell.swift */; };
+		1397E53F20FCEC1D00CD1377 /* Contacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397E53E20FCEC1D00CD1377 /* Contacto.swift */; };
+		1397E54620FCEFC200CD1377 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397E54520FCEFC200CD1377 /* AddViewController.swift */; };
 		13E3E9D220F6974300D857B6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E3E9D120F6974300D857B6 /* WelcomeViewController.swift */; };
 		FE723ED388E572211111CD95 /* Pods_SerenaDominguezE4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADBDFCBB6D08B5FE2AB2DC9 /* Pods_SerenaDominguezE4.framework */; };
 /* End PBXBuildFile section */
@@ -26,6 +29,9 @@
 		1376064820ED53DD00C63322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1376064A20ED53DD00C63322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1376065020EFFD5300C63322 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1397E53C20FCEC0D00CD1377 /* ContactoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoTableViewCell.swift; sourceTree = "<group>"; };
+		1397E53E20FCEC1D00CD1377 /* Contacto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacto.swift; sourceTree = "<group>"; };
+		1397E54520FCEFC200CD1377 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		13E3E9D120F6974300D857B6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		7E3AC9C270B3E74262F0DF01 /* Pods-SerenaDominguezE4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerenaDominguezE4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SerenaDominguezE4/Pods-SerenaDominguezE4.debug.xcconfig"; sourceTree = "<group>"; };
 		BADBDFCBB6D08B5FE2AB2DC9 /* Pods_SerenaDominguezE4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerenaDominguezE4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,16 +88,59 @@
 		1376063D20ED53DD00C63322 /* SerenaDominguezE4 */ = {
 			isa = PBXGroup;
 			children = (
-				1376063E20ED53DD00C63322 /* AppDelegate.swift */,
-				1376064020ED53DD00C63322 /* ViewController.swift */,
-				13E3E9D120F6974300D857B6 /* WelcomeViewController.swift */,
-				1376064220ED53DD00C63322 /* Main.storyboard */,
-				1376064520ED53DD00C63322 /* Assets.xcassets */,
-				1376064720ED53DD00C63322 /* LaunchScreen.storyboard */,
 				1376064A20ED53DD00C63322 /* Info.plist */,
-				1376065020EFFD5300C63322 /* GoogleService-Info.plist */,
+				1397E54420FCED0A00CD1377 /* Resources */,
+				1397E54320FCECF400CD1377 /* Model */,
+				1397E54220FCECE400CD1377 /* View */,
+				1397E54120FCECD300CD1377 /* View Controller */,
+				1397E54020FCECC600CD1377 /* Main */,
 			);
 			path = SerenaDominguezE4;
+			sourceTree = "<group>";
+		};
+		1397E54020FCECC600CD1377 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1376063E20ED53DD00C63322 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1397E54120FCECD300CD1377 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1376064720ED53DD00C63322 /* LaunchScreen.storyboard */,
+				1376064220ED53DD00C63322 /* Main.storyboard */,
+				13E3E9D120F6974300D857B6 /* WelcomeViewController.swift */,
+				1376064020ED53DD00C63322 /* ViewController.swift */,
+				1397E54520FCEFC200CD1377 /* AddViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		1397E54220FCECE400CD1377 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1397E53C20FCEC0D00CD1377 /* ContactoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1397E54320FCECF400CD1377 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1397E53E20FCEC1D00CD1377 /* Contacto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1397E54420FCED0A00CD1377 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1376064520ED53DD00C63322 /* Assets.xcassets */,
+				1376065020EFFD5300C63322 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1397E53D20FCEC0D00CD1377 /* ContactoTableViewCell.swift in Sources */,
 				13E3E9D220F6974300D857B6 /* WelcomeViewController.swift in Sources */,
+				1397E54620FCEFC200CD1377 /* AddViewController.swift in Sources */,
 				1376064120ED53DD00C63322 /* ViewController.swift in Sources */,
 				1376063F20ED53DD00C63322 /* AppDelegate.swift in Sources */,
+				1397E53F20FCEC1D00CD1377 /* Contacto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
